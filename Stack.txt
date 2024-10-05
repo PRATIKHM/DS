@@ -1,0 +1,64 @@
+#include<stdio.h>
+
+#define max 50
+int num,top=-1,a[max],i;
+void push()
+{
+printf("enter element:");
+scanf("%d",&num);
+if(top==max-1)
+{
+printf("stack is full");
+}
+else
+{
+top=top+1;
+a[top]=num;
+}
+}
+int pop()
+{
+if(top==-1)
+{
+printf("stack is empty");
+return 0;
+}
+else
+{
+num=a[top];
+top=top-1;
+return num;
+}
+}
+void display()
+{
+if(top==-1)
+{
+printf("stack is empty");
+}
+else
+{
+for(i=top;i>=0;i--)
+{
+printf("%d\t",a[i]);
+}
+}
+}
+void main()
+{
+
+push();
+push();
+push();
+display();
+printf("\n%d is poped",pop());
+
+}
+
+
+Output
+enter element:50
+enter element:20
+enter element:40
+40	20	50	
+40 is poped
