@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+void main()
+{
+	int a[100], i, n, num, pos,  clrscr();
+	printf("Enter the size of an array:");
+	scanf("%d",&n);
+	for(i=0; i<n; i++)
+	{
+		printf("Enter value: ");
+		scanf("%d", &a[i]);
+	}
+	printf("Enter the element to be inserted: ");
+	scanf("%d",&num);
+	printf("Enter the position");
+	scanf("%d",&pos);  
+	for(i=n-1;i>=pos;i--)
+	{
+	    a[i+1]=a[i];
+	}
+      a[pos] =num;
+	printf("\n Elements after insertion are: \n");
+	for(i=0;i<n;i++)
+	{
+		printf("%d\t",a[i]);
+	}
+	
+}
+
+OUTPUT
+/tmp/zn836f1fKJ.o
+Enter the size of an array:4
+Enter value: 20
+Enter value: 30
+Enter value: 40
+Enter value: 50
+Enter the element to be inserted: 60
+Enter the position2
+
+ Elements after insertion are: 
+20	30	60	40	
+
+=== Code Exited With Errors ===
